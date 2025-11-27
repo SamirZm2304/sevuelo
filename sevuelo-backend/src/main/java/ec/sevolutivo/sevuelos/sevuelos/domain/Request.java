@@ -2,14 +2,11 @@ package ec.sevolutivo.sevuelos.sevuelos.domain;
 
 import ec.sevolutivo.sevuelos.sevuelos.domain.enumeration.RequestStatus;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 
-/**
- * A Request.
- */
 @Entity
 @Table(name = "request")
 public class Request implements Serializable {
@@ -68,7 +65,6 @@ public class Request implements Serializable {
         this.status = status;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -85,7 +81,6 @@ public class Request implements Serializable {
         return getClass().hashCode();
     }
 
-    // prettier-ignore
     @Override
     public String toString() {
         return "Request{" +
